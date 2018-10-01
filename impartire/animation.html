@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	#image{
+	height:354px;
+	width:250px;
+	position:absolute;
+	}
+	
+	#button{
+	height:30px;
+	width:40px;
+	}
+	#panda{
+	background:url("images_lvl1/panda2.png");
+	height:71px;
+	width:50px;
+	animation: walk-east 1.0s steps(12) infinite;
+	}
+	@keyframes walk-east{
+	from{ background-position:0px;}
+	to {background-position: 3000px;}
+	}
+</style>
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+	
+
+var image = null; // object
+
+function doMove() {
+  image.style.left = parseInt(image.style.left)+8+'px';
+  setTimeout(doMove,20); // call doMove in 20msec
+}
+
+function init() {
+  image = document.getElementById('image'); // get the "foo" object
+  image.style.left = '0px'; // set its initial position to 0px
+  doMove(); // start animating
+}
+
+
+window.onload = init;
+
+
+</script>
+</head>
+<body>
+<button id = "button">CLick</button>
+<div id = "image">
+<div id = "panda"></div>
+</div>
+</body>
+</html>

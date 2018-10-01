@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>   FracfiK</title>
+    <link rel="stylesheet" type="text/css" href="start.css">
+	<script src="jquery.min.js"></script>
+	<script>
+		$(function(){
+			user = 'Salut,  '+localStorage.getItem("user");
+			user1=localStorage.getItem("user");
+			$('#user').text(user);
+		});
+		function levelp(){
+		window.location.replace("adunare/levels_adunare.html?user="+user1);}
+		function levelm(){
+		window.location.replace("scadere/levels_scadere.html?user="+user1);}
+	</script>
+	</head>
+<body>
+
+<div id="exactCenter1">
+
+	<div id="logo1"></div>
+	<div id="operatia"></div>
+	<a onclick="levelp()"><div id="plus"></div></a>
+	<a onclick="levelm()"><div id="minus"></div></a>
+	<a href="imultire/levels_imultire.html"><div id="inmultire"></div></a>
+	<a href="impartire/levels_impartire.html"><div id="impartire"></div></a>
+	<p id="user"></p>
+
+	<a href="index.html">
+	<div id="back">
+	</div>
+	</a>
+
+
+	</div>
+
+
+
+
+</body>
+</html>

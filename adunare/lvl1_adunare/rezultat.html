@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="start.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="rezultat.css">
+<script src="jquery.min.js"></script>
+<script>
+	var v_d = localStorage.getItem("v_d");
+	var user = localStorage.getItem("user")+',';
+	user1=localStorage.getItem("user");
+	$(document).ready(function(){
+			if(v_d > 7){$('#sad').text( +v_d+" / "+(10)); $('#sad2').text(" Bravo, ai trecut primul nivel. "); $('#pandano').hide();}
+			else { $('#sad').text( +v_d+" / "+(10)); $('#sad2').text(" Imi pare rau, dar nu ai trecut primul nivel.");$('#pandayes').hide();
+				};
+				$('#user').text(user);
+
+});
+function level(){
+		window.location.replace("../levels_adunare.html?user="+user1);}
+function raiting(){
+		window.location.replace("../../raiting.html?user="+user1);}
+	//" Bravo, ai trecut primul nivel. "
+//"  Imi pare rau, dar nu ai trecut primul nivel."
+</script>
+</head>
+<body>
+<div id="exactCenter">
+<div id="#rezultat">
+	<p id="user"></p>
+	<p id="sad"></p>
+	<p id="sad2"> </p>
+</div>
+
+
+<div id="result"></div>
+<div id="logo1"></div>
+
+
+
+<div id="pandano"></div>
+
+<div id="pandayes"></div>
+
+
+
+		<a onclick="level()">
+	<div id="back3"></div>
+		</a>
+		<a onclick="raiting()">
+		<div id="raiting">Raiting</div>
+		</a>
+</div>
+
+</body>
+</html>

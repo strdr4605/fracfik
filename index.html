@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>   FracfiK</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="cssmenu.css">
+	<script>
+	function user(){
+	var user=document.querySelector("input").value;
+	localStorage.setItem("user", user);
+	if (user=="") {
+					document.querySelector("input").style.border="1px solid red";
+					document.querySelector("#bubl3").style.color="yellow";}
+	else{ window.location.replace('operatii.html');}
+
+	}
+	function raiting(){
+		var user=document.querySelector("input").value;
+		window.location.replace('raiting.html?user='+user);
+	}
+</script>
+	</head>
+
+
+<body>
+
+<div id="exactCenter">
+	<div id="panda"></div>
+    <div id="logo"></div>
+    <div id="bubl1"><p id="yo">Yo !</p></div>
+     <div id="bubl2"><p>Salut ! Sunt Fracfik. Ajută-mă să învăt fractiile !</p></div>
+	<div id="bubl3" >Introdu nume: <input type="text" name="name" maxlength="10"></div>
+	<ul>
+        <li><a onclick="user()"><span><div id="buton">Începe JOCUL</div></span></a></li>
+        <li><a href="tutorial/tutorial.html"><span><div id="buton1">Cum să joc?</div></span></a></li>
+		<li><a onclick="raiting()"><span><div id="buton2">Rating</div></span></a></li>
+
+    </ul>
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

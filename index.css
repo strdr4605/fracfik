@@ -1,0 +1,311 @@
+/*main page*/
+
+#exactCenter { 
+		width: 1000px; 
+		height:655px; 
+		position: absolute; 
+		top: 50%; 
+		left: 50%; 
+		transform: translate(-50%, -50%);
+		background-image:url('images/chalk1.png');
+		}
+		
+
+#panda { 
+		width: 400px; 
+		height: 380px; 
+		position: relative; 
+		top: 32.7%; 
+		left: 35%; 
+		background-image:url('images/yo1.png');
+		background-repeat: no-repeat;
+		
+		}		
+
+
+/* Butoane Main Page*/
+#buton { 
+		width: 130px; 
+		height: 60px; 
+		font-family: "Kimberley";
+		font-size: 30px;
+		color:white;
+		text-align: center;		
+		
+		}		
+
+
+#buton1 { 
+		width: 130px; 
+		height: 60px; 
+		font-family: "Kimberley";
+		font-size: 30px;
+		color:white;		
+		text-align: center;
+		}		
+
+
+#buton2 { 
+		width: 130px; 
+		height: 30px; 
+		font-family: "Kimberley";
+		font-size: 30px;
+		color:white;		
+		text-align: center;
+		}		
+
+a:link {
+    text-decoration: none;
+}
+
+
+
+
+
+
+#logo{
+	background-image:url('images/logo.png');
+	width: 500px; 
+	height: 140px;
+	position:absolute;
+	top:3%;
+	left:46%;
+	}
+
+#bubl1{
+	background-image:url('images/bubl1.png');
+	width: 130px; 
+	height: 100px;
+	position:absolute;
+	top:15%;
+	left:24%;
+	font-family: "Kimberley";
+	font-size: 30px;
+	color: white;
+	}
+
+#bubl2{
+	background-image:url('images/bubl2.png');
+	width: 350px; 
+	height: 236px;
+	position:absolute;
+	top:30%;
+	left:4%;
+	font-family: "Kimberley";
+	font-size: 25px;
+	color: white;
+	}
+
+#bubl3{
+	width: 350px; 
+	height: 236px;
+	position:absolute;
+	top:35%;
+	right:-5%;
+	font-family: "Kimberley";
+	font-size: 25px;
+	color: white;
+	}
+
+#bubl3 input{
+	border-radius:50px;
+	color:black;
+	font-size:18px;
+	padding-left:10px;
+	font-family: "Courier New";
+	font-weight: bold;
+}
+
+#yo{
+position:absolute;
+	top:-2%;
+	left:14%;
+
+}
+		
+p{
+	position:absolute;
+	top:15%;
+	left:15%;
+}
+
+
+
+
+
+
+
+/* page 2 */
+
+
+#logo1{
+	background-image:url('images/logo1.png');
+	width: 220px; 
+	height: 60px;
+	position:absolute;
+	top:5%;
+	left:74%;
+	}
+
+#plus{
+	background-image:url('images/alegeplus.png');
+	width: 200px; 
+	height: 200px;
+	position:absolute;
+	top:33%;
+	left:7%;
+	}
+
+ #plus:hover {
+	transition: all 1s;
+	transform: scale(1.2);
+}
+
+#minus:hover {
+	transition: all 1s;
+	transform: scale(1.2);
+}
+
+
+#minus{
+	background-image:url('images/alegeminus.png');
+	width: 200px; 
+	height: 200px;
+	position:absolute;
+	top:33%;
+	left:30%;
+	}
+
+#operatia{
+	background-image:url('images/operatia.png');
+	width: 450px; 
+	height: 80px;
+	position:absolute;
+	top:15%;
+	left:28%;
+	}
+
+
+#back{
+	position:absolute;
+	left:8%;
+	top: 75%;
+	width: 60px;
+	height: 50px;
+	background:url("images/goback.png");
+
+	}
+
+#back:hover{
+	transition: all 1s;
+	transform: rotate(10deg) scale(1.5);
+	
+}
+
+
+
+
+#alege {
+	display: inline-block;
+	margin: 1em;
+	width: 300px;
+	height: 120px;
+	top: 5%;
+	left: 5%;
+	position: absolute;
+	background-image:url('images/alege.png');
+    
+}	
+
+	
+#level1 {
+	display: inline-block;
+	margin: 1em;
+    width: 220px;
+	height: 220px;
+	position: relative;
+	left: 10%;
+	bottom: -15%;
+	background-image:url('images/level1.png');
+	
+
+}
+
+#level1:hover {
+	transition: all 1s;
+	transform: rotate(3deg);
+}
+
+
+
+#lvl2 {
+	display: inline-block;
+	margin: 1em;
+	width: 250px;
+	height: 355px;
+	position: relative;
+	left: 10%;
+	bottom: -15%;
+	background-image:url('images/level2.png');
+
+}
+
+#lvl3 {
+	display: inline-block;
+	margin: 1em;
+	width: 300px;
+	height: 450px;
+	bottom: -15%;
+	left: 10%;
+	position: relative;
+	background-image:url('images/level3.png');
+    
+}	
+
+#back2{
+	position:absolute;
+	left:6%;
+	top: 75%;
+	width: 60px;
+	height: 50px;
+	background:url('images/goback.png');
+
+	}
+
+#back2:hover{
+	transition: all 1s;
+	transform: rotate(10deg) scale(1.2);
+	
+}
+
+
+
+
+
+@font-face {
+  font-family: "Kimberley";
+  src: url(KG.ttf) format("truetype");
+}
+/* Raiting */
+#pandayes{
+	background-image:url('images/happy.png');
+	width: 160px; 
+	height: 270px;
+	position:absolute;
+	top:50%;
+	right:7%;
+	
+	}
+#raiting{
+	width: ; 
+	position:absolute;
+	top:30%;
+	left:14%;
+	font-family: "Kimberley";
+	font-size: 25px;
+	color: white;
+	}
+#raiting td{
+	padding:5px;
+	border:5px solid yellow;
+}

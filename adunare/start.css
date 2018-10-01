@@ -1,0 +1,128 @@
+/*
+	Alege nivelul de dificultate la adunare
+*/
+
+@font-face {
+  font-family: "Kimberley";
+  src: url(KG.ttf) format("truetype");
+}
+
+#exactCenter { 
+		width: 1000px; 
+		height:655px; 
+		position: absolute; 
+		top: 50%; 
+		left: 50%; 
+		transform: translate(-50%, -50%);
+		background-image:url('images/chalk1.png');
+		}
+		
+#logo1{
+	background-image:url('images/logo1.png');
+	width: 220px; 
+	height: 60px;
+	position:absolute;
+	top:5%;
+	left:74%;
+	}
+
+
+#alege {
+	display: inline-block;
+	margin: 1em;
+	width: 300px;
+	height: 120px;
+	top: 5%;
+	left: 5%;
+	position: absolute;
+	background-image:url('images/alege.png');
+    
+}	
+
+#level1:hover, #lvl2:hover, #lvl3:hover {
+	transition: all 1s;
+	transform: rotate(3deg);
+}	
+
+#level1 {
+	display: inline-block;
+	margin: 1em;
+    width: 220px;
+	height: 220px;
+	position: relative;
+	left: 10%;
+	bottom: -15%;
+	background-image:url('images/level1.png');
+	}
+
+#lvl2 {
+	display: inline-block;
+	margin: 1em;
+	width: 250px;
+	height: 355px;
+	position: relative;
+	left: 10%;
+	bottom: -15%;
+	background-image:url('images/level2.png');
+	}
+
+#lvl3 {
+	display: inline-block;
+	margin: 1em;
+	width: 300px;
+	height: 450px;
+	bottom: -15%;
+	left: 10%;
+	position: relative;
+	background-image:url('images/level3.png');
+    }	
+
+#back2{
+	position:absolute;
+	left:6%;
+	top: 75%;
+	width: 60px;
+	height: 50px;
+	background:url('images/goback.png');
+
+	}
+
+#back2:hover{
+	transition: all 1s;
+	transform: rotate(10deg) scale(1.2);
+	
+}
+
+#user{
+
+	font-family: "Kimberley", sans-serif;
+	font-size: 30px;
+	color:white;
+	position:absolute;
+	top:32%;
+	left:10%;	
+}
+#nivel1{
+	font-family: "Kimberley", sans-serif;
+    font-size: 30px;
+    color: yellow;
+    position: absolute;
+    top: 48%;
+    left: 20%
+}
+#nivel2{
+	font-family: "Kimberley", sans-serif;
+    font-size: 30px;
+    color: yellow;
+    position: absolute;
+    top: 28%;
+    left: 47%
+}
+#nivel3{
+	font-family: "Kimberley", sans-serif;
+    font-size: 30px;
+    color: yellow;
+    position: absolute;
+    top: 14%;
+    left: 79%
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="start.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="rezultat.css">
+<script src="jquery.min.js"></script>
+<script>
+	var v_d = localStorage.getItem("v_d");
+	var user = localStorage.getItem("user")+',';
+	user1=localStorage.getItem("user");
+	$(document).ready(function(){
+			if(v_d > 7){$('#sad').text( +v_d+" / "+(10)); $('#sad2').text(" Bravo, ai trecut primul nivel. "); $('#pandano').hide();}
+			else { $('#sad').text( +v_d+" / "+(10)); $('#sad2').text(" Imi pare rau, dar nu ai trecut primul nivel.");$('#pandayes').hide();
+				};
+				$('#user').text(user);
+
+});
+function level(){
+		window.location.replace("../levels_scadere.html?user="+user1);}
+function raiting(){
+		window.location.replace("../../raiting.html?user="+user1);}
+	//" Bravo, ai trecut primul nivel. "
+//"  Imi pare rau, dar nu ai trecut primul nivel."
+</script>
+</head>
+<body>
+<?html
+$db = mysql_connect("localhost","orientee_fracfik","fracfik");
+	mysql_select_db("orientee_fracfik",$db);
+
+	$result = $_GET["result"];
+	$user = $_GET["user"];
+	$nivel = $_GET["nivel"];
+	$verify_user = mysql_query("SELECT username, $nivel FROM raiting WHERE username='$user'",$db);
+	$testrow = mysql_fetch_array($verify_user);
+	if (empty($testrow['username'])){
+			$sql = "INSERT INTO raiting (username, $nivel) VALUES ('$user', $result)";
+			mysql_query($sql);
+		}
+	else if ($result>=$testrow[$nivel]){
+			$sql="UPDATE raiting SET $nivel='$result' WHERE username='$user'";
+			mysql_query($sql);
+	}
+
+?>
+<div id="exactCenter">
+<div id="#rezultat">
+	<p id="user"></p>
+	<p id="sad"></p>
+	<p id="sad2"> </p>
+</div>
+
+
+<div id="result"></div>
+<div id="logo1"></div>
+
+
+
+<div id="pandano"></div>
+
+<div id="pandayes"></div>
+
+
+
+		<a onclick="level()">
+	<div id="back3"></div>
+		</a>
+		<a onclick="raiting()">
+		<div id="raiting">Raiting</div>
+		</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+
+#exactCenter { 
+		width: 1000px; 
+		height:655px; 
+		position: absolute; 
+		top: 50%; 
+		left: 50%; 
+		transform: translate(-50%, -50%);
+		border-radius: 50px;
+		background-image:url('images_lvl1/chalk1.png');
+		
+		}
+
+td {
+border:3px solid black;
+width : 200px;
+background : white;
+}
+
+table  {
+    border-color:black;
+	border-collapse:collapse;
+	border-spacing: 0px;
+	height : 150px;
+	width: 150px;
+}
+
+.patrat1{
+	display:none;
+	position: absolute;
+	top:25%;
+	left:30%;
+}
+.patrat2{
+	display: none;
+	position: absolute;
+	top:25%;
+	left:30%;
+}
+
+	
+@font-face {
+  font-family: "Kimberley";
+  src: url(KG.ttf) format("truetype");
+}
+
+.O{	
+	position: absolute;
+	left:300px;
+	top:200px;
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+
+.numitornumarator1{
+	display:none;
+	position: absolute;
+	background-color: blue;
+	left:480px;
+	top:145px;
+	font-family: "Kimberley";
+	color: white;
+		
+	
+}
+.numitornumarator2{
+	display:none;
+	position: absolute;
+	background-color: blue;
+	left:480px;
+	top:145px;
+	font-family: "Kimberley";
+	color: white;
+		
+	
+}
+
+.liniuta{
+	position:absolute;
+	top:-27px;
+	left:60px;
+	font-size:100px;
+	}
+.egal{
+	position:absolute;
+	font-size:80px;
+	}
+
+
+
+
+
+#back{
+	position:absolute;
+	left:5%;
+	top: 75%;
+	width: 60px;
+	height: 50px;
+	background:url("images_lvl1/goback.png");
+}
+
+.numar{
+	position: absolute;
+	left:545px;
+	top:160px;
+	font-size:50px;
+	font-family: "Kimberley";
+	color: white;
+}
+.numitor{
+	position: absolute;
+	left:545px;
+	top:240px;
+	font-size:50px;
+	font-family: "Kimberley";
+	color: white;
+}
+.titlu{
+	position: absolute;
+	top:25px;
+	left:140px;
+	font-size:40px;
+	font-family: "Kimberley";
+	color: white;
+
+}

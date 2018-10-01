@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>   FracfiK</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="cssmenu.css">
+	<script>
+		var user = localStorage.getItem("user");
+	</script>
+	</head>
+
+
+<body>
+
+<div id="exactCenter"> 
+	<div id="pandayes"></div>
+    <div id="logo"></div>
+	<table id="raiting" cellspacing=0 cellpadding=0>
+    <?php
+$db = mysql_connect("localhost","orientee_fracfik","fracfik");
+	mysql_select_db("orientee_fracfik",$db);
+	$extract = mysql_query("SELECT username, p1, p2, p3, s1, s2, s3, i1, d1 FROM raiting ORDER BY (p1+p2+p3+s1+s2+s3+i1+d1) desc");
+	$myrow = mysql_fetch_array($extract);
+	$user = $_GET["user"];
+	$switcher=false;
+	$i=0;
+	do{
+	$sum=$myrow['p1']+$myrow['p2']+$myrow['p3']+$myrow['s1']+$myrow['s2']+$myrow['s3']+$myrow['i1']+$myrow['d1'];
+	$i++; 
+	if($myrow['username']==$user) {
+		$switcher=true; 
+		printf("
+	  <tr style='color:yellow'>
+	    <td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s/80</td>
+    </tr>",$i, $myrow['username'], $myrow['p1'], $myrow['p2'], $myrow['p3'], $myrow['s1'], $myrow['s2'], $myrow['s3'], $myrow['i1'], $myrow['d1'], $sum);
+	}else{
+	printf("
+	  <tr>
+	    <td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s/80</td>
+    </tr>",$i, $myrow['username'], $myrow['p1'], $myrow['p2'], $myrow['p3'], $myrow['s1'], $myrow['s2'], $myrow['s3'], $myrow['i1'], $myrow['d1'],$sum);
+	}}
+    while($i<5 && $myrow = mysql_fetch_array($extract));
+	
+	$extract = mysql_query("SELECT username, p1, p2, p3, s1, s2, s3, i1, d1 FROM raiting WHERE username='$user'");
+	$myrow = mysql_fetch_array($extract);
+	$sum=$myrow['p1']+$myrow['p2']+$myrow['p3'];
+	if($switcher==false && $user!="")printf("
+	  <tr style='color:yellow'>
+	    <td></td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s/120</td>
+    </tr>",$myrow['username'], $myrow['p1'], $myrow['p2'], $myrow['p3'], $myrow['s1'], $myrow['s2'], $myrow['s3'], $myrow['i1'], $myrow['d1'], $sum);
+?></table>
+     <a href="index.html">
+	<div id="back">
+	</div>
+	</a>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
